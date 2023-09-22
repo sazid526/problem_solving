@@ -1,6 +1,13 @@
 import 'dart:io';
  
 void main() {
-    String? name = stdin.readLineSync();
-  print("Hello, $name! Nice to meet you.");
+ var numbers = stdin.readLineSync()!.trim().split(" ").map(int.parse).toList();
+
+  if(numbers[0] < numbers[1] && numbers[0] < numbers[2]){
+    print(numbers[0]);
+  }else if (numbers[1] < numbers[0] && numbers[1] < numbers[2]){
+    print(numbers[1]);
+  }else{
+    print(numbers[2]);
+  }
 }
